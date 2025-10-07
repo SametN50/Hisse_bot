@@ -1,0 +1,5 @@
+python-telegram-bot==20.6
+tradingview-ta==3.3.0
+matplotlib
+pandas
+numpy
