@@ -165,13 +165,15 @@ async def start(update, context):
     )
 
 
-# === Main ===
-def main():
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("ta", ta_cmd))
-    app.run_polling()
+from telegram.ext import ApplicationBuilder, CommandHandler
 
+def main():
+    application = ApplicationBuilder().token(BOT_TOKEN).build()
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("ta", ta_cmd))
+    application.run_polling()
 
 if __name__ == "__main__":
-    main()
+    import asyncio
+    asyncio.run(main())
+
