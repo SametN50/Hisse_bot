@@ -1,5 +1,7 @@
 python-telegram-bot==20.6
 tradingview-ta==3.3.0
-matplotlib
-pandas
-numpy
+matplotlib==3.10.6
+pandas==2.3.3
+numpy==2.3.3
+requests==2.32.5
+httpx==0.25.2
